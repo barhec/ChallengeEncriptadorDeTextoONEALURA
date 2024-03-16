@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador ONE/AluraLatam</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <Section class="encabezado">
+                <div>
+                    <img class="logo" src="Imagenes/Logo Final Blanco.png" alt="Logo Uno del Encriptador">
+                </div>
+                <div>
+                    <p><a href="index.html">Encriptador de Texto</a>
+                </div>
+            </Section>
+        </header>
+        <main>
+            <section class="secText">
+                <div class="txtEncriptador">
+                    <textarea onkeypress="return soloLetrasMin(event)" required id="encriptador" maxlength="99999" placeholder="Ingrese el Texto Aquí"></textarea>
+                </div>
+                <div class="advertencia">
+                    <p>&#x26A0; Ingrese solo letras minúsculas y sin acentos</p>
+                </div>
+                <div>
+                    <button onclick="botonEncriptar()">Encriptar</button>
+                    <button onclick="botonDesencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="secResp">
+                <div class="txtRespuesta">
+                    <textarea id="respuesta" readonly="readonly"></textarea>
+                </div>
+                <div>
+                    <button onclick="botonCopiar()">Copiar</button>
+                </div>
+            </section>  
+        </main>
+        <footer>
+            <section class="secPiePagina">
+                <div>
+                    <img class="logoCompleto" src="Imagenes/LOGO BLANCO.png" alt="Logo Dos del Encriptador">
+                </div>
+                <div>
+                    <p class="copyright">&copy Copyright Héctor Barrientos - 2024</p>
+                </div>
+                <div>
+                    <a href="https://github.com/barhec" target="_blank"><img class="github" src="Imagenes/GitHubLogo1.png" alt="Logo GitHub"></a>
+                    <a href="https://www.linkedin.com/in/h%C3%A9ctor-barrientos-031a1a165/" target="_blank"><img class="linkedIn" src="Imagenes/LinkedInLogo1.png" alt="Logo LinkedIn"></a>
+                    <a href="mailto:hecba3@hotmail.com"><img class="email" src="Imagenes/EmailLogo.png" alt="Logo Correo Electrónico"></a>
+                </div>
+            </section>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>
