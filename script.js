@@ -35,7 +35,7 @@ function botonDesencriptar(){
     campo_mensaje.style.backgroundImage="none";
 }
 
-function desencriptar(fraseDesencriptada){
+/*function desencriptar(fraseDesencriptada){
     for(let i=0; i<matriz_code.length; i++){
         if(fraseDesencriptada.includes(matriz_code[i][1])){
             fraseDesencriptada=fraseDesencriptada.replaceAll(
@@ -45,6 +45,16 @@ function desencriptar(fraseDesencriptada){
         }
     }
     return fraseDesencriptada;
+}*/
+
+function desencriptar(fraseDesencriptada){
+    for(let i=0;i<matriz_code.length;i++){
+        if(fraseDesencriptada.includes(matriz_code[i][1])){
+            const regex = new RegExp(matriz_code[i][1], 'g');
+            mensaje = mensaje.replace(regex, matriz_code[i][0]);
+        }
+    }
+    return mensaje;
 }
 
 function botonCopiar(){
