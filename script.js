@@ -51,10 +51,10 @@ function desencriptar(fraseDesencriptada){
     for(let i=0;i<matriz_code.length;i++){
         if(fraseDesencriptada.includes(matriz_code[i][1])){
             const regex = new RegExp(matriz_code[i][1], 'g');
-            mensaje = mensaje.replace(regex, matriz_code[i][0]);
+            fraseDesencriptada = fraseDesencriptada.replace(regex, matriz_code[i][0]);
         }
     }
-    return mensaje;
+    return fraseDesencriptada;
 }
 
 function botonCopiar(){
