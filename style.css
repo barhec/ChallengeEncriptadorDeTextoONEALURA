@@ -80,6 +80,7 @@ textarea:focus{
     height: 25em;
     font-size: 1em;
     text-align: left;
+    text-transform: lowercase;
     padding: 20px;
     background: url("Imagenes/txtNoEncontrado.png");
     background-color: white;
