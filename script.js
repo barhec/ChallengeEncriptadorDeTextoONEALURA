@@ -9,6 +9,14 @@ const matriz_code=[
     ["u","ufat"],
 ];
 
+const matriz_code2=[
+    ["u","ufat"],
+    ["o","ober"],
+    ["a","ai"],
+    ["i","imes"],
+    ["e","enter"],
+];
+
 function botonEncriptar(){
     const texto=encriptar(campo_texto.value);
     campo_mensaje.value=texto;
@@ -35,23 +43,13 @@ function botonDesencriptar(){
     campo_mensaje.style.backgroundImage="none";
 }
 
-/*function desencriptar(fraseDesencriptada){
-    for(let i=0; i<matriz_code.length; i++){
-        if(fraseDesencriptada.includes(matriz_code[i][1])){
-            fraseDesencriptada=fraseDesencriptada.replaceAll(
-                matriz_code[i][1],
-                matriz_code[i][0]
-            )
-        }
-    }
-    return fraseDesencriptada;
-}*/
-
 function desencriptar(fraseDesencriptada){
-    for(let i=0;i<matriz_code.length;i++){
-        if(fraseDesencriptada.includes(matriz_code[i][1])){
-            const regex = new RegExp(matriz_code[i][1], 'g');
-            fraseDesencriptada = fraseDesencriptada.replace(regex, matriz_code[i][0]);
+    for(let i=0; i<matriz_code2.length; i++){
+        if(fraseDesencriptada.includes(matriz_code2[i][1])){
+            fraseDesencriptada=fraseDesencriptada.replaceAll(
+                matriz_code2[i][1],
+                matriz_code2[i][0]
+            )
         }
     }
     return fraseDesencriptada;
@@ -74,6 +72,7 @@ function botonCopiar(){
         },
     });
     document.getElementById("respuesta").value="";
+    campo_mensaje.style.backgroundImage="url('Imagenes/txtNoEncontrado.png')";
 }
 
 function soloLetrasMin(e){
